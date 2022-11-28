@@ -1,13 +1,9 @@
 version: 2.1
-
+buildorbs:
+    node: circleci/node@5.0.3
 jobs:
-  build:
-    docker:
-
-      - image: circleci/node@16.17.1
-
-    working_directory: ~/repo
-
+  build_and_test:
+    executor: node/default
     steps:
       - checkout
       - run: npm install
