@@ -2,7 +2,8 @@ version: 2.1
 orbs:
     node: circleci/node@5.0.3
 jobs:
-  build_and_test:
+  build:
+    working_directory: ~/repo
     executor: node/default
     steps:
       - checkout
